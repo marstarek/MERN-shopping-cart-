@@ -1,7 +1,9 @@
+import Header from "./components/Header/Header";
 function App() {
   return (
-    <div>
-      <h2>tarek</h2>
+    <div className="layout">
+      <Header></Header>
+      <main> main</main> <footer>footer </footer>{" "}
     </div>
   );
 }
