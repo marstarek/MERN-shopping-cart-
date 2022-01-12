@@ -1,8 +1,9 @@
 import React from "react";
 import "../../css/Footer/Footer.css";
+import { words } from "../../words";
 
 const Footer = () => {
-  return <footer>&copy; Copyright Tarek Ahmed 2022 </footer>;
+  return <footer>{words.footerTitle}</footer>;
 };
 
 export default Footer;
