@@ -68,3 +68,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+<!-- creat header branch
+// push branch  $git push origin master  
+// creat pr on github
+//merge the pr to master  on github
+//checkout master $git checkout master 
+//pull  the master $git pull origin master 
+
+git checkout -b "footer-com"  to move all the changes to new branch it calls  "footer-com" 
+ -->
