@@ -1,6 +1,6 @@
 [{
         "id": "id1",
-        "title": "Product 1",
+        "tittle": "Product 1",
         "imageUrl": "/images/product1.jpeg",
         "desc": "This is Product 1",
         "price": 30,
@@ -8,7 +8,7 @@
     },
     {
         "id": "id2",
-        "title": "Product 2",
+        "tittle": "Product 2",
         "imageUrl": "/images/product2.jpeg",
         "desc": "This is Product 2",
         "price": 40,
@@ -16,7 +16,7 @@
     },
     {
         "id": "id3",
-        "title": "Product 3",
+        "tittle": "Product 3",
         "imageUrl": "/images/product3.jpg",
         "desc": "This is Product 3",
         "price": 300,
@@ -24,7 +24,7 @@
     },
     {
         "id": "id4",
-        "title": "Product 4",
+        "tittle": "Product 4",
         "imageUrl": "/images/product4.png",
         "desc": "This is Product 4",
         "price": 40,

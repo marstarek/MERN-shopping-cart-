@@ -19,10 +19,19 @@ body,
 
 main {
     grid-area: main;
-    background-color: #707070;
-    color: #fff;
+}
+
+.wrapper {
+    padding: 30px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font: size 20px;
+    justify-content: space-between;
+}
+
+
+/* .wrapper .products-wrapper {
+    width: 68%;
+} */
+
+.wrapper .filter-wrapper {
+    width: 30%;
 }
