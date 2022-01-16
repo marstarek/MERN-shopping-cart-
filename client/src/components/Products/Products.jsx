@@ -21,7 +21,7 @@ function Products(props) {
             <p> {product.tittle}</p>
             <span>${product.price}</span>
           </div>
-          <button>add to cart </button>
+          <button onClick={() => props.addToCart(product)}>add to cart </button>
         </div>
       ))}
       <ProductsModal
