@@ -23,12 +23,22 @@
         align-items: center;
         flex: 1;
     }
-    button {
-        display: inline-block;
-        border: 0;
-        background: #2a5ea5;
-        color: #fff;
-        padding: 7px;
-        border-radius: 6px;
+    .cart-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 0;
+        .total {
+            font-size: 30px;
+        }
     }
+}
+
+button {
+    display: inline-block;
+    border: 0;
+    background: #2a5ea5;
+    color: #fff;
+    padding: 7px;
+    border-radius: 6px;
 }
