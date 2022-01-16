@@ -4,7 +4,10 @@ const Filter = (props) => {
   return (
     <div className="filter-wrapper">
       <h2 className="filter-tittle">filter</h2>
-      <div className="num-of-product">num of pro</div>
+      <div className="num-of-product">
+        {" "}
+        number of products{props.productsNum}
+      </div>
       <div className="filter-by-size">
         <span>filter</span>
         <select

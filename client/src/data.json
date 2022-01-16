@@ -1,14 +1,14 @@
 [{
         "id": "id1",
-        "tittle": "Fox casual sneaker ",
+        "tittle": " sneaker ",
         "imageUrl": "/images/product1.jpeg",
         "desc": "loRerum sed voluptatem nesciunt illum optio tenetur aperiam molestiae. Hic voluptas pariatur ut quam laborum atque nulla eum accusantium. Saepe esse eaque.",
         "price": 30,
-        "sizes": ["S", "M"]
+        "sizes": ["S", "XS"]
     },
     {
         "id": "id2",
-        "tittle": "GoPro  Action Camera",
+        "tittle": " Camera",
         "imageUrl": "/images/product2.jpeg",
         "desc": "loRerum sed voluptatem nesciunt illum optio tenetur aperiam molestiae. Hic voluptas pariatur ut quam laborum atque nulla eum accusantium. Saepe esse eaque.",
         "price": 40,
@@ -16,15 +16,15 @@
     },
     {
         "id": "id3",
-        "tittle": "Apple AirPods Pro",
+        "tittle": "AirPods ",
         "imageUrl": "/images/product3.jpg",
         "desc": "loRerum sed voluptatem nesciunt illum optio tenetur aperiam molestiae. Hic voluptas pariatur ut quam laborum atque nulla eum accusantium. Saepe esse eaque.",
         "price": 300,
-        "sizes": ["S", "M", "L"]
+        "sizes": ["XXL", "M", "L"]
     },
     {
         "id": "id4",
-        "tittle": " Wireless Keyboard",
+        "tittle": "  Keyboard",
         "imageUrl": "/images/product4.png",
         "desc": "loRerum sed voluptatem nesciunt illum optio tenetur aperiam molestiae. Hic voluptas pariatur ut quam laborum atque nulla eum accusantium. Saepe esse eaque.",
         "price": 40,
