@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "../../css/Cart/Cart.css";
 import Checkout from "../CheckoutForm/Checkout";
+import Bounce from "react-reveal/Bounce";
+
 const Cart = (props) => {
   const [showform, setshowform] = useState(false);
   const [value, setvalue] = useState("");
@@ -27,25 +29,27 @@ const Cart = (props) => {
           <p>there is{props.cartItems.length} in yuor cart</p>
         )}
       </div>
-      <div className="cart-items">
-        {props.cartItems.map((item) => (
-          <div className="cart-item">
-            <img src={item.imageUrl} alt={item.tittle} />
-            <div className="cart-info">
-              <div className="cart-desc">
-                <p>Tittel: {item.tittle}</p>
-                <p>Price: ${item.price}</p>
-                <p>Qy{item.qty}</p>
-              </div>
-              <div className="cart-btn">
-                <button onClick={() => props.removeFromCart(item)}>
-                  Remove
-                </button>
+      <Bounce left cascade>
+        <div className="cart-items">
+          {props.cartItems.map((item) => (
+            <div className="cart-item">
+              <img src={item.imageUrl} alt={item.tittle} />
+              <div className="cart-info">
+                <div className="cart-desc">
+                  <p>Tittel: {item.tittle}</p>
+                  <p>Price: ${item.price}</p>
+                  <p>Qy{item.qty}</p>
+                </div>
+                <div className="cart-btn">
+                  <button onClick={() => props.removeFromCart(item)}>
+                    Remove
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>{" "}
+      </Bounce>
       {props.cartItems.length ? (
         <div className="cart-footer">
           {" "}
@@ -92,7 +96,7 @@ const Cart = (props) => {
         setshowform={setshowform}
         submitorder={submitorder}
         handelchange={handelchange}
-      />
+      />{" "}
     </div>
   );
 };
