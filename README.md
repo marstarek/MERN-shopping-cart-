@@ -1,5 +1,6 @@
 
 # Getting Started with Create React App
+MERN Application [ React Shopping Cart - Redux, Redux Thunk, Node, Express, MongoDB, Hooks, Deployment
 //install node ,mongo db,postman,gulp,sass
 //install in react  gulp-sass,
 sass,

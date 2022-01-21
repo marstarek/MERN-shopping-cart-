@@ -70,3 +70,22 @@
   padding: 20px;
   left: 25%;
 }
+.Modal .Rating-container i,
+.Modal .Rating-container span {
+  font-size: 3rem;
+  color: #444442;
+}
+.Modal .Rating-container i {
+  display: inline-block;
+  font-style: normal;
+  font-weight: 400;
+}
+.Modal .Rating-container:hover i {
+  color: #fc0;
+}
+.Modal .Rating-container i:hover {
+  color: #fc0;
+}
+.Modal .Rating-container i:hover ~ i {
+  color: black;
+}

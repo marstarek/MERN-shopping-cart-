@@ -70,4 +70,25 @@
     outline: none;
     padding: 20px;
     left: 25%;
+    .Rating-container {
+        i,
+        span {
+            font-size: 3rem;
+            color: rgb(68, 68, 66)
+        }
+        i {
+            display: inline-block;
+            font-style: normal;
+            font-weight: 400;
+        }
+        &:hover i {
+            color: #fc0
+        }
+        & i:hover {
+            color: #fc0
+        }
+        & i:hover~i {
+            color: black;
+        }
+    }
 }
