@@ -4,6 +4,8 @@ import Footer from "./components/Footer/Footer";
 import Products from "./components/Products/Products";
 import Filter from "./components/Filter/Filter";
 import Cart from "./components/Cart/Cart";
+import { Provider } from "react-redux";
+import store from "./store/store";
 
 import { words } from "./words";
 import data from "./data.json";
@@ -68,24 +70,26 @@ function App() {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
   }, [cartItems]);
   return (
-    <div className="layout">
-      <Header> </Header>{" "}
-      <main>
-        {" "}
-        <div className="wrapper">
-          <Products products={products} addToCart={addToCart} />{" "}
-          <Filter
-            productsNum={products.length}
-            handleFilterBySize={handleFilterBySize}
-            size={size}
-            order={order}
-            handleFilterByOrder={handleFilterByOrder}
-          />{" "}
-        </div>{" "}
-        <Cart cartItems={cartItems} removeFromCart={removeFromCart} />
-      </main>{" "}
-      <Footer> </Footer>{" "}
-    </div>
+    <Provider store={store}>
+      <div className="layout">
+        <Header> </Header>{" "}
+        <main>
+          {" "}
+          <div className="wrapper">
+            <Products products={products} addToCart={addToCart} />{" "}
+            <Filter
+              productsNum={products.length}
+              handleFilterBySize={handleFilterBySize}
+              size={size}
+              order={order}
+              handleFilterByOrder={handleFilterByOrder}
+            />{" "}
+          </div>{" "}
+          <Cart cartItems={cartItems} removeFromCart={removeFromCart} />{" "}
+        </main>{" "}
+        <Footer> </Footer>{" "}
+      </div>{" "}
+    </Provider>
   );
 }
 
