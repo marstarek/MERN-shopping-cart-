@@ -1,7 +1,6 @@
 import React from "react";
 import Modal from "react-modal";
 import "../../css/Products/Products.css";
-import { useState } from "react";
 import Pulse from "react-reveal/Pulse";
 const ProductsModal = (props) => {
   const { product, closeModal } = props;

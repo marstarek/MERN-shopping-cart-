@@ -1,9 +1,7 @@
-const reducer = (state = {}, action) => {
-    switch (action.type) {
-        case "ACTION_TYPE":
-            return;
-        default:
-            return state;
-    }
-};
-export default reducer;
+import { combineReducers } from "redux";
+
+import { productReducer } from "./productReducer";
+
+export default combineReducers({
+    products: productReducer,
+});

@@ -6,7 +6,6 @@ import Filter from "./components/Filter/Filter";
 import Cart from "./components/Cart/Cart";
 import { Provider } from "react-redux";
 import store from "./store/store";
-
 import { words } from "./words";
 import data from "./data.json";
 
@@ -72,7 +71,7 @@ function App() {
   return (
     <Provider store={store}>
       <div className="layout">
-        <Header> </Header>{" "}
+        <Header />
         <main>
           {" "}
           <div className="wrapper">
@@ -87,8 +86,8 @@ function App() {
           </div>{" "}
           <Cart cartItems={cartItems} removeFromCart={removeFromCart} />{" "}
         </main>{" "}
-        <Footer> </Footer>{" "}
-      </div>{" "}
+        <Footer />
+      </div>
     </Provider>
   );
 }
