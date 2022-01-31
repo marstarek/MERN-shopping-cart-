@@ -9,7 +9,7 @@ const Cart = (props) => {
   const submitorder = (e) => {
     e.preventDefault();
     console.log(value);
-    const order = {
+    const sort = {
       name: value.name,
       email: value.email,
     };
