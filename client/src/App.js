@@ -12,40 +12,39 @@ import data from "./data.json";
 function App() {
   const [products, setproducts] = useState(data);
   // filter
-  const [order, setorder] = useState("");
+  const [sort, setorder] = useState("");
   const [size, setsize] = useState("");
   const [cartItems, setcartItems] = useState(
     JSON.parse(localStorage.getItem("cartItems")) || []
   );
-  const handleFilterBySize = (e) => {
-    setsize(e.target.value);
-    if (e.target.value == "ALL") {
-      setproducts(data);
-    } else {
-      let clonedproducts = [...products];
+  // const handleFilterBySize = (e) => {
+  //   setsize(e.target.value);
+  //   if (e.target.value == "ALL") {
+  //     setproducts(data);
+  //   } else {
+  //     let clonedproducts = [...products];
+  //     let newproducts = clonedproducts.filter(
+  //       (p) => p.sizes.indexOf(e.target.value) != -1
+  //     );
+  //     setproducts(newproducts);
+  //   }
+  // };
+  // const handleFilterBysort = (e) => {
+  //   let sort = e.target.value;
+  //   setorder(sort);
+  //   let clonedproducts = [...products];
 
-      let newproducts = clonedproducts.filter(
-        (p) => p.sizes.indexOf(e.target.value) != -1
-      );
-      setproducts(newproducts);
-    }
-  };
-  const handleFilterByOrder = (e) => {
-    let order = e.target.value;
-    setorder(order);
-    let clonedproducts = [...products];
-
-    let newproducts = clonedproducts.sort(function (a, b) {
-      if (order == "lowest") {
-        return a.price - b.price;
-      } else if (order == "highest") {
-        return b.price - a.price;
-      } else {
-        return a.id < b.id ? 1 : -1;
-      }
-    });
-    setproducts(newproducts);
-  };
+  //   let newproducts = clonedproducts.sort(function (a, b) {
+  //     if (sort == "lowest") {
+  //       return a.price - b.price;
+  //     } else if (sort == "highest") {
+  //       return b.price - a.price;
+  //     } else {
+  //       return a.id < b.id ? 1 : -1;
+  //     }
+  //   });
+  //   setproducts(newproducts);
+  // };
   const addToCart = (product) => {
     const cartItemsClone = [...cartItems];
     let isProductExist = false;
@@ -77,17 +76,17 @@ function App() {
           <div className="wrapper">
             <Products products={products} addToCart={addToCart} />{" "}
             <Filter
-              productsNum={products.length}
-              handleFilterBySize={handleFilterBySize}
-              size={size}
-              order={order}
-              handleFilterByOrder={handleFilterByOrder}
+            // productsNum={products.length}
+            // handleFilterBySize={handleFilterBySize}
+            // size={size}
+            // sort={sort}
+            // handleFilterBysort={handleFilterBysort}
             />{" "}
           </div>{" "}
           <Cart cartItems={cartItems} removeFromCart={removeFromCart} />{" "}
         </main>{" "}
         <Footer />
-      </div>
+      </div>{" "}
     </Provider>
   );
 }
