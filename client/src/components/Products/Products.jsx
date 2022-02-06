@@ -5,6 +5,7 @@ import "../../css/Products/Products.css";
 import Bounce from "react-reveal/Bounce";
 import { connect } from "react-redux";
 import { fetchProducts } from "../../store/actions/products";
+import { addToCart } from "../../store/actions/cart";
 function Products(props) {
   const [product, setproduct] = useState("");
   const openModal = (product) => {
@@ -41,12 +42,11 @@ function Products(props) {
     </Bounce>
   );
 }
-// export default Products;
 export default connect(
   (state) => {
     return {
       products: state.products.filterProducts,
     };
   },
-  { fetchProducts }
+  { fetchProducts, addToCart }
 )(Products);
