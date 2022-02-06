@@ -1,4 +1,4 @@
-import { FETCH_PRODUCTS, FILTER_SORT, FILTER_ZISE } from "./types";
+import { FETCH_PRODUCTS, FILTER_order, FILTER_ZISE } from "./types";
 
 export const fetchProducts = () => {
     return (dispatch) => {
@@ -27,11 +27,11 @@ export const filteredSize = (products, value) => {
         });
     };
 };
-export const filteredSort = (products, value) => {
+export const filteredorder = (products, value) => {
     return (dispatch) => {
         let clonedproducts = [...products];
 
-        let newproducts = clonedproducts.sort(function(a, b) {
+        let newproducts = clonedproducts.order(function(a, b) {
             if (value == "lowest") {
                 return a.price - b.price;
             } else if (value == "highest") {
@@ -41,9 +41,9 @@ export const filteredSort = (products, value) => {
             }
         });
         dispatch({
-            type: FILTER_SORT,
+            type: FILTER_order,
             data: {
-                sort: value,
+                order: value,
                 products: newproducts,
             },
         });

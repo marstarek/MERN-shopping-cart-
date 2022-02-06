@@ -2,7 +2,7 @@ import React from "react";
 import "../../css/Filter/Filter.css";
 import Bounce from "react-reveal/Bounce";
 import { connect } from "react-redux";
-import { filteredSize, filteredSort } from "../../store/actions/products";
+import { filteredSize, filteredorder } from "../../store/actions/products";
 const Filter = (props) => {
   return (
     <Bounce right>
@@ -33,11 +33,11 @@ const Filter = (props) => {
           </div>
           {/*  */}
           <div className="filter-by-size">
-            <span>sort</span>
+            <span>order</span>
             <select
-              value={props.sort}
+              value={props.order}
               onChange={(e) =>
-                props.filteredSort(props.filterProducts, e.target.value)
+                props.filteredorder(props.filterProducts, e.target.value)
               }
               className="filter-select"
               name=""
@@ -58,7 +58,7 @@ const Filter = (props) => {
 export default connect(
   (state) => {
     return {
-      sort: state.products.sort,
+      order: state.products.order,
       size: state.products.size,
       products: state.products.products,
       filterProducts: state.products.filterProducts,
@@ -66,6 +66,6 @@ export default connect(
   },
   {
     filteredSize,
-    filteredSort,
+    filteredorder,
   }
 )(Filter);

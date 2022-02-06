@@ -2,7 +2,7 @@
 export const FETCH_PRODUCTS = "FETCH_PRODUCTS";
 // filter
 export const FILTER_ZISE = "FILTER_ZISE";
-export const FILTER_SORT = "FILTER_SORT";
+export const FILTER_order = "FILTER_order";
 // cart
 export const ADD_CART = "ADD_CART";
 export const REMOVE_CART = "REMOVE_CART";

@@ -1,4 +1,4 @@
-import { FETCH_PRODUCTS, FILTER_SORT, FILTER_ZISE } from "../actions/types";
+import { FETCH_PRODUCTS, FILTER_order, FILTER_ZISE } from "../actions/types";
 
 export const productReducer = (state = {}, action) => {
     switch (action.type) {
@@ -11,10 +11,10 @@ export const productReducer = (state = {}, action) => {
                 size: action.data.size,
                 filterProducts: action.data.products,
             };
-        case FILTER_SORT:
+        case FILTER_order:
             return {
                 ...state,
-                sort: action.data.sort,
+                order: action.data.order,
                 filterProducts: action.data.products,
             };
         default:

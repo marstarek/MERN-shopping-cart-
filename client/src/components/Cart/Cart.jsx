@@ -11,7 +11,7 @@ const Cart = (props) => {
   const submitorder = (e) => {
     e.preventDefault();
     console.log(value);
-    const sort = {
+    const order = {
       name: value.name,
       email: value.email,
     };
